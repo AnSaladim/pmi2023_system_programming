@@ -1,4 +1,6 @@
-main {
+
+
+body {
     padding: 0;
     margin: 0;
 
@@ -21,26 +23,27 @@ header {
     background-color: #3E37A6;
     height: 136px;
     
+    display: flex;
+    justify-content: space-around;
 }
 
-.logo {
+/* Создал новый блок для логотипа и задал ему ширину такуюже как и блоку обратной связи*/
 
-    margin-left: 10%;
-    position: absolute;
-    top: -5px;
-    width: 244px;
-    height: 136px;
+.logo_block{
+    display: flex;
+    justify-content: center;
 }
+
+.head_feedback_link, .logo_block {
+    width: 310px;
+}
+
 
 .head_text {
-    margin-left: 31%;
-    position: absolute;
-    top: 10px;
+    margin-top: 28px;
     white-space: nowrap;
     font-size: 36px;
     text-align: center;
-
-    
 }
 
 .head_text span {
@@ -48,7 +51,6 @@ header {
 }
 
 .head_feedback {
-    margin-left: 78%;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -56,8 +58,7 @@ header {
    
     width: 233px;
     height: 58px;
-    position: absolute;
-    top: 15px;
+    margin-top: 40px;
     white-space: nowrap;
     font-size: 36px;
     text-align: center;
@@ -114,22 +115,25 @@ header {
 }
 
 .about_title {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 39px;
-        text-align: center;
-        top: 80px;
-    
-        color: #090274;
+    margin-top: 53px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 39px;
+    text-align: center;
+    top: 80px;
+
+    color: #090274;
 }
+
+/* Убрал width и добавил margin-right: 11.5%;*/
 
 .about_main {
     margin-top: 53px;
     margin-bottom: 7%;
     margin-left: 11.5%;
-    width: 100%;
+    margin-right: 11.5%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -142,10 +146,10 @@ header {
     height: 442px;  
 }
 
+/* Убрал height*/
 
 .about_rightpart{
     width: 50%;
-    height: 214px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -172,6 +176,7 @@ header {
 }
 
 .scinceproblem_title {
+    margin-top: 53px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -182,11 +187,13 @@ header {
     color: #FFFFFF;
 }
 
+/* Убрал width и добавил margin-right: 11.5%;*/
+
 .scinceproblem_main {
     margin-top: 53px;
     margin-bottom: 7%;
     margin-left: 11.5%;
-    width: 100%;
+    margin-right: 11.5%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -194,9 +201,10 @@ header {
     gap: 114px;
 }
 
+/* Убрал height */
+
 .scinceproblem_leftpart{
     width: 50%;
-    height: 214px;
 
     font-family: 'Montserrat';
     font-style: normal;
@@ -225,6 +233,8 @@ header {
 }
 
 .edition_title {
+    margin-top: 53px;
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -235,48 +245,27 @@ header {
     color: #090274;
 }
 
-.editor1img {
-    position: absolute;
+.editor_block{
+    margin-top: 53px;
+    margin-bottom: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 114px;
+}
+
+.editor_img {
     width: 200px;
     height: 196px;
-    left: 15%;
-    top: 1743px;
     background: #7A7A7A;
 }
 
-.editor2img {
-    position: absolute;
-    width: 200px;
-    height: 195px;
-    left: 68%;
-    top: 2029px;
-    background: #7A7A7A;
-}
-
-.editor3img {
-    position: absolute;
-    width: 200px;
-    height: 196px;
-    left: 15%;
-    top: 2344px;
-    background: #7A7A7A;
-}
-
-.editor4img {
-    position: absolute;
-    width: 200px;
-    height: 195px;
-    left: 68%;
-    top: 2630px;
-    background: #7A7A7A;
-}
-
-.editor1 {
-    position: absolute;
-    width: 692px;
-    height: 110px;
-    left: 29%;
-    top: 1786px;
+.editor {
+    width: 70%;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -284,46 +273,119 @@ header {
     line-height: 34px;
 }
 
-.editor2 {
-    position: absolute;
-    width: 692px;
-    height: 110px;
-    left: 29%;
-    top: 2029px;
+.partners {
+    background-color: #201C58;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.partners_title {
+    margin-top: 53px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 260px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.line1 {
+    width: 300px;
+    height: 0;
+    padding: 0;
+    border: none;
+    border-top: 3px solid #FFFFFF;
+}
+
+.partners_main {
+    margin-top: 100px;
+    margin-bottom: 7%;
+    margin-left: 26%;
+    margin-right: 26%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 490px;
+}
+
+.patner_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 28px;
+}
+
+/*проблема пока не получается текст по центру выровнять*/
+.partner {
+    display: block;
+    width: 77.5%;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 28px;
     line-height: 34px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.partner_img {
+    width: 200px;
+    height: 196px;
+    background: #7A7A7A;
+}
+
+footer {
+    
+    border-top: 7px solid #FFFFFF;
+    background-size: cover;
+    
+ }
+
+.footer {
+    
+    background-color: #201C58;
+    height: 136px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer_links {
+    margin-top: 40px;
+    width: 310px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 8px;
+    color: #FFFFFF;
+}
+
+.footer_links_text {
+    text-align: right;
+}
+.footer_links_text1 {
+    margin-top: 5%;
     text-align: right;
 }
 
-.editor3 {
-    position: absolute;
-    width: 692px;
-    height: 110px;
-    left: 29%;
-    top: 2344px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 34px;
-}
 
-.editor4 {
-    position: absolute;
-    width: 692px;
-    height: 110px;
-    left: 29%;
-    top: 2630px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 34px;
-    text-align: right;
-}
+
+
+
 
 
 
