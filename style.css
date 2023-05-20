@@ -19,6 +19,10 @@ header {
     width: 100%;
 }
 
+.header_burger {
+    display: none;
+}
+
 .head {
     background-color: #3E37A6;
     height: 136px;
@@ -143,7 +147,8 @@ header {
 
 .about_leftpart_img {
     width: 475px;
-    height: 442px;  
+    height: 442px;
+    background-color: grey;  
 }
 
 /* Убрал height*/
@@ -333,7 +338,7 @@ header {
 /*проблема пока не получается текст по центру выровнять*/
 .partner {
     display: block;
-    width: 77.5%;
+    width: 100%;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -353,6 +358,7 @@ footer {
     
     border-top: 7px solid #FFFFFF;
     background-size: cover;
+    background-color: #201C58;
     
  }
 
@@ -382,6 +388,378 @@ footer {
     text-align: right;
 }
 
+.footer_links2 {
+    display: none;
+}
+
+.block {
+    display: none;
+}
+
+@media screen and (max-width:1024px) {
+    
+    
+    .block {
+        display: block;
+        width: 200px;
+    }
+    
+    
+    .head_text {
+        margin-right: 60px;
+        margin-top: 35px;
+        white-space: nowrap;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .head_text span {
+        display: block;
+    }
+    
+    .head_feedback, .head_feedback_link{
+        display: none;
+    }
+
+    .footer_links {
+        display: none;
+    }
+
+    .footer_links2 {
+        display: block;
+        margin-top: 40px;     
+        width: 100%;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 8px;
+        color: #FFFFFF;
+        margin-left: 5%;
+        
+    }
+
+    .footer_links_text {
+        text-align: left;
+    }
+
+    .footer_links_text1 {
+        margin-top: 5%;
+        margin-right: 10%;
+        padding-bottom: 15px;
+
+        text-align: right;
+    }
+
+    .about_main {
+        flex-direction: column;
+        gap: 70px;
+    }
+    .scinceproblem_main {
+        flex-direction: column-reverse;
+        gap: 70px;
+    }
+
+    .about_rightpart, .scinceproblem_leftpart{
+        width: 70%;
+    }
+
+    .partners_title {
+        gap: 100px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .head {
+        
+        justify-content: space-between;  
+    }
+    
+    .logo_block {
+        width: 160px;
+    }
+    
+    .block {
+        display: block;
+        width: 95px;
+    }
+    
+    
+    .head_text {
+        margin-right: 60px;
+        margin-top: 35px;
+        white-space: nowrap;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .head_text span {
+        display: block;
+    }
+    
+    .head_feedback, .head_feedback_link{
+        display: none;
+    }
+    
+    
+    .header_burger {
+        display: block;
+        position: relative;
+        top: 65px;
+        right: 15px;
+        width: 20px;
+        height: 15px;
+        
+        margin-right: 10px;
+
+        z-index: 50;
+    }
+
+    .header_burger::after,
+    .header_burger::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 100%;
+
+        background-color: white;
+        transition: all 0.5s;
+    }
+
+    .header_burger span {
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 6.5px;
+
+        transition: all 0.5s;
+    }
+
+    .header_burger::after {
+        bottom: 0;
+    }
+
+    .header_burger::before {
+        top: 0;
+    }
+
+    .header_burger.active::before{
+        transform: rotate(45deg);
+        top: 6.5px;
+    }
+
+    .header_burger.active::after{
+        transform: rotate(-45deg);
+        bottom: 6.5px;
+    }
+
+    .header_burger.active span{
+        transform: scale(0);
+    }
+
+    .head_menu {
+        
+        position: absolute;
+        top: 0;
+        right: 0;
+    
+        width: auto;
+        height: auto;
+        background: none;
+
+    }
+    
+    .menu {
+        position: fixed;
+        padding-top: 150px;
+        width: 30%;
+        top: 0;
+        right: -50%;
+        background-color: #C4D6F1;
+
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        z-index: 10;
+
+        transition: all 0.5s ease 0s;
+    }
+
+    .menu.active{
+        right: 0;
+    }
+
+    .about_main {
+        flex-direction: column;
+        gap: 50px; 
+    }
+    .about_rightpart, .scinceproblem_leftpart {
+        width: 80%;
+        overflow: auto;
+        height:200px;
+        padding: 0 15px;
+        
+    }
+
+    .scinceproblem_main {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .editor_block{
+    
+        gap: 80px;
+    }
+    
+    .editor_img {
+        width: 115.2px;
+        height: 101.376px;
+
+    }
+    
+    .editor {
+        width: 70%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .partners_title {
+        gap: 104px;
+    }
+    
+    .line1 {
+        width: 120px;
+    }
+    
+    .partners_main {
+        gap: 196px;
+    }
+    
+    .patner_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 28px;
+    }
+    
+    /*проблема пока не получается текст по центру выровнять*/
+    .partner {
+        display: block;
+        width: 100%;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 34px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    .partner_img {
+        width: 115.2px;
+        height: 101.376px;
+    }
+
+    .footer_links {
+        display: none;
+    }
+
+    .footer_links2 {
+        display: block;
+        margin-top: 40px;     
+        width: 100%;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 8px;
+        color: #FFFFFF;
+        margin-left: 5%;
+        
+    }
+
+    .footer_links_text {
+        text-align: left;
+    }
+    .footer_links_text1 {
+        margin-top: 5%;
+        margin-right: 10%;
+        padding-bottom: 15px;
+
+        text-align: right;
+    }  
+}
+
+@media screen and (max-width: 430px) {
+    .footer_links_text1 {
+        margin-top: 10%;
+    }
+    
+    .about_leftpart_img {
+        width: 268.665px;
+        height: 250px;
+    }
+
+    .menu.active {
+        right: 270px;
+    }
+
+    .partners_title {
+        gap: 30px;
+    }
+
+    .line1 {
+        width: 100px;
+    }
+
+    .partners_main {
+        gap: 80px;
+    }
+
+    .editor {
+        font-size: 15px;
+        line-height: 15px;
+    }
+    .partners_title, .about_titlem .scinceproblem_title, .edition_title {
+        font-size: 15px;
+    }
+    .editor_block {
+        gap: 30px;
+    }
+    
+
+}
+
+@media screen and (max-width: 376px) {
+    .menu.active {
+        right: 300px;
+    }
+    .line1 {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .menu.active {
+        right: 350px;
+    }
+
+    .partners_main {
+        gap: 40px;
+    }
+
+    .line1 {
+        width: 70px;
+    }
+
+    
+}
 
 
 

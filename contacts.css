@@ -195,7 +195,7 @@ header {
     gap: 13px;
 }
  /*проблема: не  изменяется расстояние между иконками*/
-.contacs_messenger {
+.contacts_messenger {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -303,7 +303,9 @@ header {
 
 footer {
     
-    border-top: 7px solid #FFFFFF;   
+    border-top: 7px solid #FFFFFF;
+    background-size: cover;
+    background-color: #201C58;   
  }
 
 .footer {
@@ -326,7 +328,330 @@ footer {
 .footer_links_text {
     text-align: right;
 }
+
 .footer_links_text1 {
     margin-top: 5%;
     text-align: right;
+}
+
+.block {
+    display: none;
+}
+
+.footer_links2 {
+    display: none;
+}
+
+.header_burger {
+    display: none;
+}
+
+@media screen and (max-width:1440px){
+    .contacts_rightpart{
+        width: 850px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    
+    
+    .block {
+        display: block;
+        width: 200px;
+    }
+    
+    
+    .head_text {
+        margin-right: 60px;
+        margin-top: 35px;
+        white-space: nowrap;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .head_text span {
+        display: block;
+    }
+    
+    .head_feedback, .head_feedback_link{
+        display: none;
+    }
+
+    .footer_links {
+        display: none;
+    }
+
+    .footer_links2 {
+        display: block;
+        margin-top: 40px;     
+        width: 100%;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 8px;
+        color: #FFFFFF;
+        margin-left: 5%;
+        
+    }
+
+    .footer_links_text {
+        text-align: left;
+    }
+
+    .footer_links_text1 {
+        margin-top: 5%;
+        margin-right: 10%;
+        padding-bottom: 15px;
+
+        text-align: right;
+    }
+
+    .contacts_main {
+        flex-direction: row;
+    }
+
+    .contacts_rightpart, .contacts_leftpart {
+        width: 454px;
+        height: 630px;
+    }
+
+    .twosegmentblock {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contacts_rightpart_main {
+        gap: 30px;
+    }
+    
+    .line2 {
+        width: 218px;
+        border: 0.5px solid #FFFFFF;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .head { 
+        justify-content: space-around;  
+    }
+    
+    .logo_block {
+        width: 160px;
+    }
+    
+    .block {
+        display: block;
+        width: 95px;
+    }
+    
+    
+    .head_text {
+        margin-right: 60px;
+        margin-top: 35px;
+        white-space: nowrap;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .head_text span {
+        display: block;
+    }
+    
+    .head_feedback, .head_feedback_link{
+        display: none;
+    }
+    
+    
+    .header_burger {
+        display: block;
+        position: relative;
+        top: 65px;
+        right: 15px;
+        width: 20px;
+        height: 15px;
+        
+        margin-right: 10px;
+
+        z-index: 50;
+    }
+
+    .header_burger::after,
+    .header_burger::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 100%;
+
+        background-color: white;
+        transition: all 0.5s;
+    }
+
+    .header_burger span {
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 6.5px;
+
+        transition: all 0.5s;
+    }
+
+    .header_burger::after {
+        bottom: 0;
+    }
+
+    .header_burger::before {
+        top: 0;
+    }
+
+    .header_burger.active::before{
+        transform: rotate(45deg);
+        top: 6.5px;
+    }
+
+    .header_burger.active::after{
+        transform: rotate(-45deg);
+        bottom: 6.5px;
+    }
+
+    .header_burger.active span{
+        transform: scale(0);
+    }
+
+    .head_menu {
+        
+        position: absolute;
+        top: 0;
+        right: 0;
+    
+        width: auto;
+        height: auto;
+        background: none;
+
+    }
+    
+    .menu {
+        position: fixed;
+        padding-top: 150px;
+        width: 30%;
+        top: 0;
+        right: -50%;
+        background-color: #C4D6F1;
+
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        z-index: 10;
+
+        transition: all 0.5s ease 0s;
+    }
+
+    .menu.active{
+        right: 0;
+    }
+
+    .contacts_main {
+        flex-direction: column;
+    }
+
+    .contacts_rightpart {
+        width: 454px;
+        height: 630px;
+    }
+
+    .twosegmentblock {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contacts_rightpart_main {
+        gap: 30px;
+    }
+    
+    .line2 {
+        width: 218px;
+        border: 0.5px solid #FFFFFF;
+    }
+}
+
+
+@media screen and (max-width: 426px) {
+    .contacts_leftpart, .contacts_rightpart {
+        width: 300px;
+        height: 500px;
+    }
+
+    .contacts_leftpart_title {
+        font-size: 20px;
+    }
+    
+    
+    .contacts_number_messenger {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+
+    .messenger_img {
+        width: 40px;
+    }
+
+    .twosegment {
+        gap: 1px;
+    }
+    .twosegmentblock {
+        gap: 10px;
+    }
+
+    .contacts_rightpart_main {
+        gap: 10px;
+    }
+    
+    .sendbutton {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 9px 70px;
+        gap: 10px;
+    
+        width: 80px;
+        height: 27px;
+    
+        background: #FFFFFF;
+        border-radius: 80px;
+    }
+    
+    .sendbutton span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+    
+        text-align: center;
+    
+        color: #090274;
+    }
+    
+
+    .menu.active {
+        right: 130px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .menu.active {
+        right: 150px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .menu.active {
+        right: 180px;
+    }
 }
