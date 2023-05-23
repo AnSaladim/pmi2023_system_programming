@@ -396,6 +396,10 @@ footer {
     display: none;
 }
 
+.sapn1 {
+    display: none;
+}
+
 @media screen and (max-width:1024px) {
     
     
@@ -495,7 +499,7 @@ footer {
         display: block;
     }
     
-    .head_feedback, .head_feedback_link{
+    .head_feedback, .head_feedback_link {
         display: none;
     }
     
@@ -592,7 +596,17 @@ footer {
     .menu.active{
         right: 0;
     }
-
+    
+    .head_text::after,
+    .logo_block::before {
+        transition: all 0.5s;
+    }
+   
+    .head_text.active, .logo_block.active{
+        display: none;
+        transition: all 0.5s ease 0s;
+    }
+    
     .about_main {
         flex-direction: column;
         gap: 50px; 
@@ -696,18 +710,45 @@ footer {
     }  
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 650px) {
     .footer_links_text1 {
         margin-top: 10%;
     }
+
+    .head_text{
+        font-size: 20px;
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .head_text span {
+        display: block;
+        width: px;
+    }
+    .head{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        height: 100px;
+    }
+    .logo_block{
+        display: none;
+    }
     
+    .footer{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+    }
+
     .about_leftpart_img {
         width: 268.665px;
         height: 250px;
     }
 
     .menu.active {
-        right: 270px;
+        right: 20px;
+        width: 40%;
     }
 
     .partners_title {
@@ -738,16 +779,22 @@ footer {
 
 @media screen and (max-width: 376px) {
     .menu.active {
-        right: 300px;
+        right: 18px;
     }
     .line1 {
         width: 80px;
+    }
+    .head_text{
+        font-size: 20px;
+        text-align: left;
+        margin-left: 5%;
+        margin-right: 40%;
     }
 }
 
 @media screen and (max-width: 321px) {
     .menu.active {
-        right: 350px;
+        right: 15px;
     }
 
     .partners_main {
@@ -756,6 +803,12 @@ footer {
 
     .line1 {
         width: 70px;
+    }
+    .head_text{
+        font-size: 18px;
+        text-align: left;
+        margin-left: 3%;
+        margin-right: 40%;
     }
 
     

@@ -13,6 +13,7 @@ h1 {
 }
 
 
+
 header {
     width: 100%;
 }
@@ -171,6 +172,7 @@ header {
     background: #D9D9D9;
 }
 
+
 .year p {
     font-family: 'Montserrat';
     font-style: normal;
@@ -183,6 +185,7 @@ header {
 
     color: #000000;
 }
+
 
 .yearj {
     display: flex;
@@ -215,6 +218,53 @@ header {
     padding: 0px;
     gap: 10px;
 }
+
+button {
+    outline:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 28px;
+    background: #D9D9D9;
+    color:black;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &:hover {
+      color:white;
+      background: #201C58;
+    }
+    &:active {
+      letter-spacing: 2px;
+      letter-spacing: 2px ;
+    }
+    &:after {
+      content:"2023";
+    }
+  }
+  .onclic {
+    width: 40px;
+    font-size:0;
+    animation: rotating 2s 0.25s linear infinite;
+  
+    &:after {
+      content:"";
+    }
+    &:hover {
+      color:black;
+      background: #C4D6F1;
+    }
+  }
+  .validate {
+    font-size:20px;
+    color: white;
+    background: green;
+    &:after {
+      font-family:'FontAwesome';
+      content:"\f00c";
+    }
+  }
 
 .cover_img {
     width: 245px;
@@ -287,6 +337,18 @@ footer {
 }
 
 .navigation_menu2 {
+    display: none;
+}
+
+.footer_links2 {
+    display: none;
+}
+
+.block {
+    display: none;
+}
+
+.header_burger {
     display: none;
 }
 
@@ -508,9 +570,18 @@ footer {
         margin-left: 28%;
         margin-right: 28%;
     }
+    .head_text::after,
+    .logo_block::before {
+        transition: all 0.5s;
+    }
+   
+    .head_text.active, .logo_block.active{
+        display: none;
+        transition: all 0.5s ease 0s;
+    }
 }
 
-@media  screen and (max-width: 430px) {
+@media  screen and (max-width: 650px) {
     .year1 {
         flex-direction: column;
     }
@@ -537,22 +608,56 @@ footer {
         display: none;
     }
     .menu.active {
-        right: 130px;
+        right: 20px;
+        width: 40%;
+    }
+
+    .head_text{
+        font-size: 20px;
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .head{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        height: 100px;
+    }
+    .logo_block{
+        display: none;
+    }
+    .footer{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
     }
 }
 
 @media screen and (max-width: 376px) {
     .menu.active {
-        right: 150px;
+        right: 18px;
+    }
+    .head_text{
+        font-size: 20px;
+        text-align: left;
+        margin-left: 5%;
+        margin-right: 40%;
     }
 }
 
 @media screen and (max-width: 321px) {
     .menu.active {
-        right: 180px;
+        right: 15px;
     }
-
-    .year{
+    .head_text{
+        font-size: 18px;
+        text-align: left;
+        margin-left: 3%;
+        margin-right: 40%;
+    }
+    /* не меняется размер кнопки, устал думать и разбираться */
+    .button{
         width: 15px;
     }
 }
