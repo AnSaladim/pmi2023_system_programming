@@ -48,6 +48,17 @@ header {
     display: block;
 }
 
+.head_text1 {
+    margin-top: 28px;
+    white-space: nowrap;
+    font-size: 36px;
+    text-align: center;
+}
+
+.head_text1 span {
+    display: block;
+}
+
 .head_feedback {
     box-sizing: border-box;
     display: flex;
@@ -319,7 +330,7 @@ footer {
     margin-top: 40px;
     width: 310px;
     font-weight: 400;
-    font-size: 8px;
+    font-size: 12px;
     line-height: 8px;
     color: #FFFFFF;
 }
@@ -350,6 +361,17 @@ footer {
 
 .header_burger {
     display: none;
+}
+.head_text2{
+    display: none;
+    margin-top: 28px;
+    white-space: nowrap;
+    font-size: 36px;
+    text-align: center;
+}
+
+.head_text2 span {
+    display: block;
 }
 
 @media screen and (max-width:1024px) {
@@ -386,7 +408,7 @@ footer {
         margin-top: 40px;     
         width: 100%;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 8px;
         color: #FFFFFF;
         margin-left: 5%;
@@ -570,12 +592,12 @@ footer {
         margin-left: 28%;
         margin-right: 28%;
     }
-    .head_text::after,
+    .head_text::after, .head_text1::after, .head_text2::after,
     .logo_block::before {
         transition: all 0.5s;
     }
    
-    .head_text.active, .logo_block.active{
+    .head_text.active, .head_text1.active, .head_text2.active, .logo_block.active{
         display: none;
         transition: all 0.5s ease 0s;
     }
@@ -612,11 +634,25 @@ footer {
         width: 40%;
     }
 
-    .head_text{
+    .head_text {
+        display: block;
         font-size: 20px;
         text-align: center;
         margin-left: 10%;
         margin-right: 10%;
+    }
+    .head_text span {
+        display: block;
+    }
+    .head_text1 {
+        display: block;
+        font-size: 20px;
+        text-align: center;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .head_text1 span {
+        display: block;
     }
     .head{
         display: flex;
@@ -634,11 +670,27 @@ footer {
     }
 }
 
+@media screen and (max-width: 426px) {
+    .head_text{
+        display: none;
+    }
+    .head_text2 {
+        display: block;
+        font-size: 20px;
+        text-align: left;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .head_text2 span {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 376px) {
     .menu.active {
         right: 18px;
     }
-    .head_text{
+    .head_text1{
         font-size: 20px;
         text-align: left;
         margin-left: 5%;
@@ -650,7 +702,7 @@ footer {
     .menu.active {
         right: 15px;
     }
-    .head_text{
+    .head_text1{
         font-size: 18px;
         text-align: left;
         margin-left: 3%;
@@ -659,5 +711,8 @@ footer {
     /* не меняется размер кнопки, устал думать и разбираться */
     .button{
         width: 15px;
+    }
+    .footer_links2{
+        font-size: 12px;
     }
 }

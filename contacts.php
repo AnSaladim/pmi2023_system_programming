@@ -20,6 +20,11 @@
                     <span>ФИЛОЛОГИЧЕСКИЙ АЛЬМАНАХ</span> 
                     <span>VERBI DISCIPULI</span>  
                 </h1>
+                <h1 class="head_text2">
+                    <span>ФИЛОЛОГИЧЕСКИЙ</span>
+                    <span>АЛЬМАНАХ</span>  
+                    <span>VERBI DISCIPULI</span> 
+                </h1>
             </a>
         
             <a class="head_feedback_link" href="contacts.php">
@@ -77,7 +82,15 @@
                             <a href=""><img src="icons\iconmonstr-vk-5-30.png" alt="vkontakte"  class="messenger_img"></a>
                             <a href=""><img src="icons\iconmonstr-telegram-5-30.png" alt="telegram"  class="messenger_img"></a>
                         </div> -->
-                        <div class="middle">
+                        
+                    <!-- </div> -->
+
+                    <div class="contacts_number">
+                        <img src="icons\Frame 31.png" class="mail_img">
+                        <p class="contacts_phone_mail">somebody@gmail.com </p>
+                    </div>
+
+                    <div class="middle">
                             <div class ="btn"><a href="">
                               <i class="fa fa-whatsapp" aria-hidden="true"></i>
                             </a>
@@ -92,12 +105,6 @@
                             </a>
                           </div>
                         </div>
-                    <!-- </div> -->
-
-                    <div class="contacts_number">
-                        <img src="icons\Frame 31.png" class="mail_img">
-                        <p class="contacts_phone_mail">somebody@gmail.com </p>
-                    </div>
                 </div>
             </div>
 
@@ -136,7 +143,7 @@
                         <span>Отправить</span>
                     </figure> -->
                     <div class="container">
-                        <button id="button"></button>
+                        <button id="button">Отправить</button>
                       </div>
                     </form>
             </div>
@@ -153,7 +160,7 @@
                 <img class="logo" src="icons/logo_new.png" alt="logo">
             </div>
             <a class="head_text_link" href="main.html">
-                <h1 class="head_text">    
+                <h1 class="head_text1">    
                     <span>ФИЛОЛОГИЧЕСКИЙ АЛЬМАНАХ</span> 
                     <span>VERBI DISCIPULI</span>  
                 </h1>
